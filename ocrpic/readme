@@ -16,5 +16,12 @@ brew install  tesseract
 
 https://blog.csdn.net/u010670689/article/details/78374623
 
+保存矩阵为图片
+scipy.misc.imsave('meelo.jpg', x)
 
+
+2.用PIL
+from PIL import Image
+im = Image.fromarray(img)
+im.save("test.jpg")
 
