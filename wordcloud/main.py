@@ -21,18 +21,19 @@ cut_text =' '.join(jieba.lcut(mytext))
 #print(cut_text)
 
 #maskimg = 'welian_logo_blue_mini.jpg'
-maskimg = 'self.jpg'
+maskimg = 'myself.png'
 color_mask = imread(maskimg)
 
 
 cloud = WordCloud(
     background_color='white',   # 背景色
+    #background_color='gray',   # 背景色
     mask=color_mask,            # 背景图
     #font_path='font.ttf',      # 字体对排布有比较大的影响 
     font_path='font.otf',       
     max_words=10000,            # 最大显示的字数
     #stopwords=STOPWORDS,       # 停用词
-    max_font_size=150,          # 字体最大值 影响排布
+    max_font_size=120,          # 字体最大值 影响排布
     random_state=60             # 配色方案个数 影响排布
 )
 #生成词云图
